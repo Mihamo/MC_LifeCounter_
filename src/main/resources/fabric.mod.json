@@ -1,0 +1,41 @@
+{
+	"schemaVersion": 1,
+	"id": "mc_lifecounter_evolution",
+	"version": "${version}",
+	"name": "MC_LifeCounter_Evolution",
+	"description": "This is an example description! Tell everyone what your mod is about!",
+	"authors": [
+		"Me!"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/mc_lifecounter_evolution/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"mihamo.lifecount.MC_LifeCounter_Evolution"
+		],
+		"client": [
+			"mihamo.lifecount.client.MC_LifeCounter_EvolutionClient"
+		],
+		"fabric-datagen": [
+			"mihamo.lifecount.client.MC_LifeCounter_EvolutionDataGenerator"
+		]
+	},
+	"mixins": [
+		"mc_lifecounter_evolution.mixins.json",
+		{
+			"config": "mc_lifecounter_evolution.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.19.3",
+		"minecraft": "~26.2",
+		"java": ">=25",
+		"fabric-api": "*"
+	}
+}

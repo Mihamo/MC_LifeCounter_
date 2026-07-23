@@ -14,7 +14,7 @@
 @rem limitations under the License.
 @rem
 
-@if "%DEBUG%" == "" @echo off
+@if "%DEBUG%"=="" @echo off
 @rem ##########################################################################
 @rem
 @rem  Gradle startup script for Windows
@@ -25,15 +25,15 @@
 if "%OS%"=="Windows_NT" setlocal
 
 set DIRNAME=%~dp0
-if "%DIRNAME%" == "" set DIRNAME=.
+if "%DIRNAME%"=="" set DIRNAME=.
 set APP_BASE_NAME=%~n0
 set APP_HOME=%DIRNAME%
 
-@rem Resolve any " in APP_HOME to make it shorter.
+@rem Resolve any "." and ".." in APP_HOME to make it shorter.
 for %%i in ("%APP_HOME%") do set APP_HOME=%%~fi
 
 @rem Add default JVM options here. You can also use JAVA_OPTS and GRADLE_OPTS to pass JVM options to this script.
-set DEFAULT_JVM_OPTS=" "-Xmx64m" "-Xms64m"
+set DEFAULT_JVM_OPTS=-Xmx64m -Xms64m
 
 @rem Find java.exe
 if defined JAVA_HOME goto findJavaFromJavaHome
@@ -75,7 +75,7 @@ set CLASSPATH=%APP_HOME%\gradle\wrapper\gradle-wrapper.jar
 :end
 @endlocal & set ERROR_CODE=%ERRORLEVEL%
 
-if not "%ERROR_CODE%" == "0" goto fail
+if not "%ERROR_CODE%"=="0" goto fail
 
 goto successExit
 
@@ -83,7 +83,7 @@ goto successExit
 set ERROR_CODE=1
 
 :successExit
-if "%ERROR_CODE%" equ "0" (
+if "%ERROR_CODE%"=="0" (
     exit /b
 ) else (
     exit /b %ERROR_CODE%

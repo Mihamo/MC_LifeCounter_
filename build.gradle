@@ -24,12 +24,10 @@ dependencies {
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
 }
 
-processResources {
+tasks.named('processResources', ProcessResources) {
 	inputs.property "version", project.version
 	inputs.property "minecraft_version", project.minecraft_version
 	inputs.property "loader_version", project.loader_version
-
-	filteringCharacterEncoding = "UTF-8"
 
 	filesMatching("fabric.mod.json") {
 		expand "version": project.version,
@@ -46,14 +44,21 @@ java {
 	withSourcesJar()
 }
 
-jars {
-	archivesName = project.archives_base_name
+jar {
+	from("LICENSE") {
+		rename { "${it}_${project.base.archivesName.get()}" }
+	}
 }
 
-publishingMaven {
+publishing {
 	publications {
 		mavenJava(MavenPublication) {
 			from components.java
 		}
+	}
+
+	repositories {
+		// See https://docs.gradle.org/current/userguide/publishing_maven.html for more information
+		// mavenLocal()
 	}
 }

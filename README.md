@@ -1,6 +1,6 @@
 # MC Life Counter Mod
 
-A Minecraft Fabric mod (1.20.2) that adds a lives system with progressive hardcore mode.
+A Minecraft Fabric mod (1.26.2) that adds a lives system with progressive hardcore mode.
 
 ## Features
 

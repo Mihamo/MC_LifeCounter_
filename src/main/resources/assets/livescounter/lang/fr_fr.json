@@ -1,0 +1,10 @@
+{
+  "livescounter.death.message": "%s est mort! Vies restantes: %d/%d",
+  "livescounter.last_life": "⚠️ DERNIÈRE VIE! Le jeu est maintenant en mode HARDCORE!",
+  "livescounter.spectator": "Fin de jeu! Vous avez été basculé en mode Spectateur.",
+  "livescounter.config.lives": "Nombre de vies",
+  "livescounter.config.lives.tooltip": "Définir le nombre de vies au début (défaut: 3)",
+  "livescounter.command.lives.current": "Vies actuelles: %d/%d",
+  "livescounter.command.lives.set": "Vies définies à: %d",
+  "livescounter.hud.lives": "Vies: %d/%d"
+}

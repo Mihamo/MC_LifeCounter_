@@ -20,7 +20,9 @@ public class MC_LifeCounter_Evolution implements ModInitializer {
 		// However, some things (like resources) may still be uninitialized.
 		// Proceed with mild caution.
 
-		LOGGER.info("Hello Fabric world!");
+		// Initialize LifeCounterManager
+		new LifeCounterManager();
+		LOGGER.info("MC_LifeCounter_Evolution initialized!");
 	}
 
 	public static Identifier id(String path) {
